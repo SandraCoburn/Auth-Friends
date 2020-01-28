@@ -1,0 +1,122 @@
+.App {
+  text-align: center;
+  font-family: sans-serif;
+  /* text-align: center;
+  display: flex;
+  width: 100%;
+  /* min-width: 100vh; */
+  /* flex-flow: row wrap;
+  justify-content: space-around; */
+}
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:700i|Source+Sans+Pro&display=swap");
+body {
+  overflow-x: hidden;
+  background-color: #9e9a8c;
+  /* background-image: url("https://besthqwallpapers.com/Uploads/26-3-2017/14803/thumb2-smurfs-the-lost-village-2017-all-characters-4k.jpg"); */
+  background-size: cover;
+  background-repeat: repeat;
+  padding: 0;
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15%, 1fr));
+  grid-auto-rows: auto;
+  grid-gap: 20px;
+  grid-auto-flow: row;
+  justify-content: center;
+  align-items: start;
+  margin: 0 2rem;
+}
+/* .card-list {
+  display: flex;
+} */
+.card {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  position: relative;
+  background-image: linear-gradient(rgb(43, 43, 14), #faf54e);
+  border-radius: 4px;
+  height: 80%;
+  margin: 8px;
+  margin-left: 40%;
+  padding: 16px;
+  width: 80%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+form {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+form > input {
+  background-color: #515a1e;
+  border-radius: 3px;
+  padding: 2px 0;
+  font-size: 1rem;
+  width: 70%;
+  outline: 0;
+  color: white;
+  border-bottom: 1px solid #dce99b;
+  margin-right: 8px;
+  margin-bottom: 2%;
+  height: 10vh;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0;
+  height: 12vh;
+  text-decoration: none;
+  background: #414141;
+  color: #ffffff;
+  font-family: inherit;
+  margin-bottom: 2%;
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 4px;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button:hover,
+button:focus {
+  background: #a2272d;
+}
+
+button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+
+button:active {
+  transform: scale(0.99);
+}
