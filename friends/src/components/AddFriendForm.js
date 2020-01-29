@@ -8,6 +8,7 @@ const AddFriendForm = () => {
       <input type="text" name="age" />
       <label htmlFor="email">Email: </label>
       <input type="email" name="email" />
+      <button type="submit">Add Friend</button>
     </form>
   );
 };

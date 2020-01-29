@@ -11,7 +11,7 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:700i|Source+Sans+Pro&display=swap");
 body {
   overflow-x: hidden;
-  background-color: #9e9a8c;
+  background-color: #f0ebdc;
   /* background-image: url("https://besthqwallpapers.com/Uploads/26-3-2017/14803/thumb2-smurfs-the-lost-village-2017-all-characters-4k.jpg"); */
   background-size: cover;
   background-repeat: repeat;
@@ -34,6 +34,25 @@ body {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+ul {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 36px;
+  padding: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+li {
+  list-style: none;
+  margin-right: 6px;
+  color: #204963;
+}
+
+a {
+  text-decoration: none;
+  padding: 6px;
+  color: #204963;
 }
 
 .card-list {
@@ -69,7 +88,7 @@ body {
 }
 
 form {
-  width: 50%;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
 }
@@ -78,13 +97,13 @@ form > input {
   border-radius: 3px;
   padding: 2px 0;
   font-size: 1rem;
-  width: 70%;
+  width: 100%;
   outline: 0;
   color: white;
   border-bottom: 1px solid #dce99b;
   margin-right: 8px;
   margin-bottom: 2%;
-  height: 10vh;
+  height: 5vh;
 }
 
 button {
@@ -92,7 +111,7 @@ button {
   border: none;
   padding: 1rem 2rem;
   margin: 0;
-  height: 12vh;
+  height: 3vh;
   text-decoration: none;
   background: #414141;
   color: #ffffff;
@@ -102,6 +121,7 @@ button {
   cursor: pointer;
   text-align: center;
   border-radius: 4px;
+  border: 1px solid #dce99b;
   transition: background 250ms ease-in-out, transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
