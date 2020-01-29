@@ -19,9 +19,10 @@ const FriendsList = () => {
     <>
       <div>
         <AddFriendForm setFriends={setFriends} />
+
+        <button onClick={getFriends}>Get Friends</button>
       </div>
       <div className="card-list">
-        <button onClick={getFriends}>Get Friends</button>
         {friends.map(friend => (
           <Friends key={friend.id} friend={friend} />
         ))}
