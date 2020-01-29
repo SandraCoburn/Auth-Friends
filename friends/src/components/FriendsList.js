@@ -1,27 +1,32 @@
 import React, { useState } from "react";
 import Friends from "./Friends";
+import AddFriendForm from "./AddFriendForm";
 import { axiosWithAuth } from "../utilis/axiosWithAuth";
 
-const FriendsList = props => {
+const FriendsList = () => {
   const [friends, setFriends] = useState([]);
 
   const getFriends = () => {
     axiosWithAuth()
       .get("/api/friends")
       .then(res => {
-        setFriends({ ...friends, friends: res.data });
+        setFriends(res.data);
       })
       .catch(err => console.log(err));
   };
+  console.log("friends", friends);
   return (
-    <div className="card-list">
-      <button type="submit" onClick={getFriends}>
-        Get Friends
-      </button>
-      {friends.map(friend => (
-        <Friends key={friend.id} friend={friend} />
-      ))}
-    </div>
+    <>
+      <div>
+        <AddFriendForm setFriends={setFriends} />
+      </div>
+      <div className="card-list">
+        <button onClick={getFriends}>Get Friends</button>
+        {friends.map(friend => (
+          <Friends key={friend.id} friend={friend} />
+        ))}
+      </div>
+    </>
   );
 };
 export default FriendsList;

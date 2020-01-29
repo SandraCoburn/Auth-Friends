@@ -9,23 +9,24 @@ import PrivateRoute from "./components/PrivateRoute";
 function App() {
   return (
     <div className="App">
-      <ul>
-        <li>
-          <Link to="/login">Login</Link>
-        </li>
-        <li>
-          <Link to="/protected">Friends Page</Link>
-        </li>
-      </ul>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/login">Login</Link>
+          </li>
+          <li>
+            <Link to="/protected">Friends Page</Link>
+          </li>
+        </ul>
+      </nav>
       <header className="App-header">
         <h1> Friends </h1>
-
-        <Switch>
-          <PrivateRoute path="/protected" component={FriendsList} />
-          <Route path="/login" component={LogIn} />
-          <Route component={LogIn} />
-        </Switch>
       </header>
+      <Switch>
+        <PrivateRoute path="/protected" component={FriendsList} />
+        <Route path="/login" component={LogIn} />
+        <Route component={LogIn} />
+      </Switch>
     </div>
   );
 }

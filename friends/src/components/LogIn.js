@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
 const LogIn = props => {
@@ -41,7 +41,7 @@ const LogIn = props => {
           value={credentials.password}
           onChange={handleChange}
         />
-        <button type="submit" />
+        <button />
       </form>
     </div>
   );
