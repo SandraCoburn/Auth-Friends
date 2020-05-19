@@ -5,22 +5,22 @@ const AddFriendForm = ({ setFriends }) => {
     name: "",
     age: "",
     email: "",
-    id: Date.now()
+    id: Date.now(),
   });
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     axiosWithAuth()
       .post("/api/friends", newfriend)
-      .then(res => {
+      .then((res) => {
         console.log(res.data);
         setFriends(res.data, newfriend);
       });
   };
-  const handleChanges = event => {
+  const handleChanges = (event) => {
     setNewFriend({
       ...newfriend,
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     });
   };
   //   const clearForm = event => {
@@ -36,7 +36,7 @@ const AddFriendForm = ({ setFriends }) => {
       <input type="text" name="age" onChange={handleChanges} />
       <label htmlFor="email">Email: </label>
       <input type="email" name="email" onChange={handleChanges} />
-      <button>Add Friend</button>
+      <button>Add a Friend</button>
     </form>
   );
 };

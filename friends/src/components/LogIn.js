@@ -1,26 +1,26 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const LogIn = props => {
+const LogIn = (props) => {
   const [credentials, setCredentials] = useState({});
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     setCredentials({
       ...credentials,
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     });
   };
 
-  const login = event => {
+  const login = (event) => {
     event.preventDefault();
     axios
       .post("http://localhost:5000/api/login", credentials)
-      .then(res => {
+      .then((res) => {
         console.log(res);
         localStorage.setItem("token", res.data.payload);
         props.history.push("/protected");
       })
-      .catch(err => console.log(err));
+      .catch((err) => console.log(err));
   };
 
   return (
@@ -41,7 +41,7 @@ const LogIn = props => {
           value={credentials.password}
           onChange={handleChange}
         />
-        <button />
+        <button>Log in</button>
       </form>
     </div>
   );

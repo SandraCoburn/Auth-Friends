@@ -9,10 +9,10 @@ const FriendsList = () => {
   const getFriends = () => {
     axiosWithAuth()
       .get("/api/friends")
-      .then(res => {
+      .then((res) => {
         setFriends(res.data);
       })
-      .catch(err => console.log(err));
+      .catch((err) => console.log(err));
   };
   console.log("friends", friends);
   return (
@@ -23,8 +23,13 @@ const FriendsList = () => {
         <button onClick={getFriends}>Get Friends</button>
       </div>
       <div className="card-list">
-        {friends.map(friend => (
-          <Friends key={friend.id} friend={friend} />
+        {friends.map((friend) => (
+          <Friends
+            friends={friends}
+            setFriends={setFriends}
+            key={friend.id}
+            friend={friend}
+          />
         ))}
       </div>
     </>
