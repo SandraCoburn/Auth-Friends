@@ -1,0 +1,146 @@
+.App {
+  text-align: center;
+  font-family: sans-serif;
+}
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:700i|Source+Sans+Pro&display=swap");
+body {
+  overflow-x: hidden;
+  background-color: #f0ebdc;
+
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+nav {
+  width: 100%;
+  max-height: 10vh;
+  position: fixed;
+  background-color: #f0ebdc;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 30vh;
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+ul {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 36px;
+  padding: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+li {
+  list-style: none;
+  margin-right: 6px;
+  color: #204963;
+}
+
+a {
+  text-decoration: none;
+  padding: 6px;
+  color: #204963;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+  grid-auto-rows: auto;
+  grid-gap: 5%;
+  /* scroll-margin-right: 10%; */
+  grid-auto-flow: row;
+  justify-content: center;
+  align-items: start;
+  margin: 5rem;
+}
+
+.card {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  background-image: linear-gradient(rgb(43, 43, 14), #faf54e);
+  border-radius: 4px;
+  height: 90%;
+
+  margin-left: 5%;
+  margin-right: 20%;
+  /* scroll-margin-right: 20; */
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+form > input {
+  background-color: #515a1e;
+  border-radius: 3px;
+  padding: 2px 0;
+  font-size: 1rem;
+  width: 15%;
+  outline: 0;
+  color: white;
+  border-bottom: 1px solid #dce99b;
+  margin-right: 0;
+  margin-top: 2%;
+  height: 5vh;
+}
+form > label {
+  margin-top: 2%;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 2%;
+  max-width: 30%;
+  height: 5vh;
+  text-decoration: none;
+  background: #414141;
+  color: #ffffff;
+  font-family: inherit;
+  margin-bottom: 1%;
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid #dce99b;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button:hover,
+button:focus {
+  background: #a2272d;
+}
+
+button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+
+button:active {
+  transform: scale(0.99);
+}
